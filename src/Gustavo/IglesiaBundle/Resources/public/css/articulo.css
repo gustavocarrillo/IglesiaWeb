@@ -1,0 +1,124 @@
+body {height: 800px}
+
+#title {position: absolute;
+		 margin: 20px 0 0 180px;
+		 width:577px;
+		 text-align: center;
+		 color: white;
+		 background-color: #0F054C;
+		 box-shadow: 1px 1px 5px #000000;
+		 border-radius:3px;}
+
+h2 {padding: 5px;
+    font-family:sans-serif;
+    font-weight: normal;
+    text-shadow:2px 2px 8px #989898   }
+
+
+#articulo_form {position: absolute;
+                margin: 50px 0 0 180px;
+                width: 555px;
+                height: 680px;
+                padding:20px 0 0 20px;
+                box-shadow: 1px 1px 5px #000000;
+                border-radius: 6px;
+                }
+
+input {position: absolute;
+	   margin: 0px;
+	   padding: 5px;
+	   width: 165px;
+	   /*background-color: #989898 ;*/
+	   box-shadow:1px 1px 3px #989898 ;
+	   border-radius: 3px;
+	   text-transform: capitalize}
+
+label {position: absolute;
+	   top: 3px; 
+	   margin: 0;
+	   font-family:arial,sans-serif;
+	   font-size: 16px;
+	   letter-spacing: 1px;}
+
+#titulo, #autor, #tipo,
+#f_creado, #f_edicion,
+#estatus, #imagen{position: absolute;
+                  width: 300px;
+                  height: 30px;
+                 }
+
+.errores {position: absolute;
+		  font-size: 0.7em;
+		  color: #D00000 ;
+		  }
+
+.fields_right{left:300px;}
+
+#articulo_autor, #articulo_tipo,
+#articulo_f_creado, #articulo_estatus{left:100px}
+
+#titulo{top: 20px}
+
+#articulo_titulo{top: 0;
+			  left: 74px}
+
+#er_titulo,#er_autor,
+#er_tipo {margin-top: 22px;
+	        left: 1px} 
+
+#autor {top:20px;}
+
+#articulo_autor{position: absolute;
+                width: 184px;
+                height: 30px;
+                left: 71px;
+                text-align: center;
+                text-transform: capitalize;
+                }
+
+#tipo{top: 70px}
+
+#articulo_tipo{position: absolute;
+			   width: 184px;
+			   height: 30px;
+			   left: 71px;
+               text-align: center;
+			   text-transform: capitalize;
+			   }
+
+#imagen {top: 70px;}
+
+#articulo_imagen{position: absolute;
+                  left: 73px;
+                  text-transform: lowercase}
+
+#er_imagen {position: absolute;
+            top:30px}
+
+#l_cuerpo {top: 123px}
+
+#articulo_cuerpo{position: absolute;
+				   width: 515px;
+				   height: 450px;
+				   padding: 8px;
+				   top: 166px;
+				   left: 19px;
+				   resize:none;
+				   border-radius: 3px;
+				   box-shadow:1px 1px 3px #989898  }
+
+#er_cuerpo {position: absolute;
+	        top:140px;
+            left: 18px}
+
+#articulo_Guardar{position: absolute;
+                  width: 100px;
+			      height: 30px;
+			      top: 650px;
+			      left: 16px;
+			      box-shadow:1px 1px 3px #989898 }
+
+
+
+
+

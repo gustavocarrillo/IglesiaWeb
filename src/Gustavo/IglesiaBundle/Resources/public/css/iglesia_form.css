@@ -1,0 +1,104 @@
+
+#titulo {position: absolute;
+         margin: 20px 0 0 180px;
+         width:610px;
+         text-align: center;
+         color: white;
+         background-color: #0F054C;
+         box-shadow: 1px 1px 5px #000000;
+         border-radius:3px;}
+
+h2 {padding: 5px;
+    font-family:sans-serif;
+    font-weight: normal;
+    text-shadow:2px 2px 8px #989898   }
+
+
+#iglesia_form {position: absolute;
+                margin: 50px 0 0 180px;
+                width: 588px;
+                padding:20px 0 0 20px;
+                height: 340px;
+                box-shadow: 1px 1px 5px #000000;
+                border-radius: 6px;
+}
+
+input {position: absolute;
+        margin: 0px;
+        padding: 5px;
+        width: 165px;
+        /*background-color: #989898 ;*/
+        box-shadow:1px 1px 3px #989898 ;
+        border-radius: 3px;
+        text-transform: capitalize;}
+
+label {top: 5px;
+    position: absolute;
+    margin: 0;
+    font-family:arial,sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;}
+
+#nombre, #telefono, #email,
+#direccion, #localidad, #redSocial,
+#biografia {position: absolute;
+            width: 300px;
+            height: 30px;
+            }
+
+.errores {position: absolute;
+          font-size: 0.7em;
+          color: #D00000 ;
+}
+
+.fields_right {left:307px;}
+
+#iglesia_telefono, #iglesia_redSocial {left:100px}
+
+#nombre {top: 20px}
+
+#iglesia_nombre,#iglesia_direccion, 
+#iglesia_email{left: 90px}
+
+#er_nombre, #er_telefono,
+#er_direccion, #er_localidad{top: 22px}
+
+#telefono{top: 20px;}
+
+#iglesia_telefono{left: 100px}
+
+#direccion,#localidad {top: 70px }
+
+#iglesia_localidad {left:100px;}
+
+#email {top: 120px}
+
+#redSocial {top: 120px;}
+
+#iglesia_Guardar{position: absolute;
+                 top: 310px}
+
+#l_biografia {top: 171px}
+
+#iglesia_biografia{position: absolute;
+                    width: 540px;
+                    height: 70px;
+                    padding: 8px;
+                    top: 204px;
+                    left: 19px;
+                    resize:none;
+                    border-radius: 3px;
+                    box-shadow:1px 1px 3px #989898  }
+
+#er_biografia {top:180px;
+               left: 18px}
+
+#iglesia_Guardar{width: 100px;
+    height: 30px;
+    top: 313px;
+    left: 16px;
+    box-shadow:1px 1px 3px #989898 }
+
+
+
+

@@ -1,0 +1,66 @@
+{% extends "IglesiaBundle::adminBase.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/iglesia/css/autor.css') }}" type="text/css">
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+
+    <div id="titulo"><h2>Registrar Autor</h2></div>
+    <div id="autor_form">
+         {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+        <div id="nombre">
+            <label id="l_nombre">Nombre:</label>
+            {{ form_widget(form.nombre) }}
+            <span class="errores" id="er_nombre">{{ form_errors(form.nombre) }}</span>
+        </div>
+
+        <div id="ministerio" class="fields_right">
+            <label id="l_ministerio">Ministerio:</label>
+            {{ form_widget(form.ministerio) }}
+            <span class="errores" id="er_ministerio">{{ form_errors(form.ministerio) }}</span>
+        </div>
+
+        <div id="iglesia">
+            <label id="l_iglesia">Iglesia:</label>
+            {{ form_widget(form.iglesia) }}
+            <span class="errores" id="er_iglesia">{{ form_errors(form.iglesia) }}</span>
+        </div>
+
+        <div id="telefono" class="fields_right">
+            <label id="l_telefono">Telefono:</label>
+            {{ form_widget(form.telefono) }}
+            <span class="errores" id="er_telefono">{{ form_errors(form.telefono) }}</span>
+        </div>
+
+        <div id="email">
+            <label id="l_email">Email:</label>
+            {{ form_widget(form.email) }}
+            <span class="errores">{{ form_errors(form.email) }}</span>
+        </div>
+
+        <div id="foto" class="fields_right">
+            <label id="l_foto">Foto:</label>
+            {{ form_widget(form.foto) }}
+            <span class="errores">{{ form_errors(form.foto) }}</span>
+        </div>
+
+        <div id="redSocial" class="fields_right">
+            <label id="l_redSocial">Red Social:</label>
+            {{ form_widget(form.redSocial) }}
+            <span class="errores" id="er_redSocial">{{ form_errors(form.redSocial) }}</span>
+        </div>
+
+        <label id="l_descripcion">Descripcion:</label>
+            {{ form_widget(form.descripcion) }}
+            <span class="errores" id="er_descripcion">{{ form_errors(form.descripcion) }}</span>
+
+
+        {{ form_widget(form.Guardar) }}
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

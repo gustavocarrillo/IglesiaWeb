@@ -1,0 +1,48 @@
+{% extends "IglesiaBundle::adminBase.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/iglesia/css/articulo.css') }}" type="text/css">
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+
+    <div id="title"><h2>Registrar Articulo</h2></div>
+    <div id="articulo_form">
+         {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+        <div id="titulo">
+            <label id="l_titulo">Titulo:</label>
+            {{ form_widget(form.titulo) }}
+            <span class="errores" id="er_titulo">{{ form_errors(form.titulo) }}</span>
+        </div>
+
+        <div id="autor" class="fields_right">
+            <label id="l_autor">Autor:</label>
+            {{ form_widget(form.autor) }}
+            <span class="errores" id="er_autor">{{ form_errors(form.autor) }}</span>
+        </div>
+
+        <div id="tipo">
+            <label id="l_tipo">Tipo:</label>
+            {{ form_widget(form.tipo) }}
+            <span class="errores" id="er_tipo">{{ form_errors(form.tipo) }}</span>
+        </div>
+
+        <div id="imagen" class="fields_right">
+            <label id="l_imagen">Imagen:</label>
+            {{ form_widget(form.imagen) }}
+            <span class="errores" id="er_imagen">{{ form_errors(form.imagen) }}</span>
+        </div>
+
+        <label id="l_cuerpo">Cuerpo:</label>
+            {{ form_widget(form.cuerpo) }}
+            <span class="errores" id="er_cuerpo">{{ form_errors(form.cuerpo) }}</span>
+
+
+        {{ form_widget(form.Guardar) }}
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

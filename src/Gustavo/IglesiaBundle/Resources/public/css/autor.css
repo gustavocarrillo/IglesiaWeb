@@ -1,0 +1,132 @@
+#titulo {position: absolute;
+		 margin: 20px 0 0 180px;
+		 width:602px;
+		 text-align: center;
+		 color: white;
+		 background-color: #0F054C;
+		 box-shadow: 1px 1px 5px #000000;
+		 border-radius:3px;}
+
+h2 {padding: 5px;
+    font-family:sans-serif;
+    font-weight: normal;
+    text-shadow:2px 2px 8px #989898   }
+
+
+#autor_form {position: absolute;
+			 margin: 50px 0 0 180px;
+			 width: 580px;
+			 height: 340px;
+			 padding:20px 0 0 20px;
+			 box-shadow: 1px 1px 5px #000000;
+			 border-radius: 6px;
+			 }
+
+input {position: absolute;
+	   margin: 0px;
+	   padding: 5px;
+	   width: 165px;
+	   /*background-color: #989898 ;*/
+	   box-shadow:1px 1px 3px #989898 ;
+	   border-radius: 3px;
+	   text-transform: capitalize;}
+
+label {position: absolute;
+	   top: 3px; 
+	   margin: 0;
+	   font-family:arial,sans-serif;
+	   font-size: 16px;
+	   letter-spacing: 1px;}
+
+#nombre, #ministerio, #iglesia, 
+#telefono, #email, #foto, #redSocial, 
+#descripcion {position: absolute;
+			  width: 300px;
+			  height: 30px;
+			 }
+
+.errores {position: absolute;
+		  font-size: 0.7em;
+		  color: #D00000 ;
+		  }
+
+.fields_right{left:300px;}
+
+#autor_ministerio, #autor_telefono,
+#autor_foto, #autor_redSocial {left:100px}
+
+#nombre{top: 20px}
+
+#autor_nombre{top: 0;
+			  left: 74px}
+
+#er_nombre,#er_ministerio,
+#er_iglesia {margin-top: 22px;
+	        left: 1px} 
+
+#ministerio {top:20px;}
+
+#autor_ministerio{position: absolute;
+			   	  width: 184px;
+			      height: 30px;
+			      left: 97px;
+			      text-transform: capitalize;
+			      text-align: center;}
+
+#iglesia{top: 70px}
+
+#autor_iglesia{position: absolute;
+			   width: 184px;
+			   height: 30px;
+			   left: 71px;
+			   text-transform: capitalize;
+			   text-align: center;}
+
+
+#telefono{top: 68px;}
+
+#l_telefono {top: 5px}
+
+#autor_telefono{top:2px;}
+
+#er_telefono{top: 24px;
+			 left: 1px}
+
+#email {top: 120px}
+
+#autor_email {left: 73px}
+
+#foto {top: 120px;}
+
+#redSocial {top: 168px;}
+
+#autor_Guardar{position: absolute;
+				top: 310px}
+
+#l_descripcion {top: 171px}
+
+#autor_descripcion{position: absolute;
+				   width: 540px;
+				   height: 70px;
+				   padding: 8px;
+				   top: 214px;
+				   left: 19px;
+				   resize:none;
+				   /*background-color: yellow;*/
+				   border-radius: 3px;
+				   box-shadow:1px 1px 3px #989898  }
+
+#er_descripcion {position: absolute;
+	             top:185px;
+                 left: 18px}
+
+#autor_Guardar{width: 100px;
+			   height: 30px;
+			   top: 313px;
+			   left: 16px;
+			   box-shadow:1px 1px 3px #989898 }
+
+
+
+
+

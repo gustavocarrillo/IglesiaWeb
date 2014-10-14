@@ -1,0 +1,61 @@
+<style type="text/css">
+
+	.sidebar {position: absolute;
+			  margin: 20px;
+			  width: 133px;
+			  height: 520px;
+			  box-shadow: #989898 1px 2px 2px 3px;
+			  border-radius: 10px;
+			 }
+
+	#tittle {
+			 border-radius:10px 10px 0 0;
+			}
+
+    .seccion_tit{width: 123px;
+                 color: #FFFFFF;
+                 padding: 2px 0 2px 10px;
+                 font-family: sans-serif;
+                 text-shadow:1px 1px 14px white;
+                 background-color:#0F054C}
+    
+	ul {list-style: none;
+		margin-top: 10px;
+		padding: 0 5px 10px 15px
+	   }
+
+	ul li {padding-bottom: 6px;
+		   margin-bottom:2px;
+          font-size: 0.9em}
+
+    ul li a.slinks {font-family: sans-serif;
+    		 text-shadow:2px 2px 8px #989898;
+    		 color: #0F054C;
+    		 text-decoration: none;}
+
+    ul li a.slinks:hover{padding-left: 5px;}
+
+</style>
+
+<div class="sidebar">
+	<!--<div id="tittle">Menu</div>-->
+    <div class="seccion_tit" id="tittle">Autor</div>
+	<ul>
+		<li><a class="slinks" href="{{ path ('nuevo_autor') }}">Nuevo Autor</a></li>
+		<li><a class="slinks" href="{{ path ('autores_registrados') }}">Ver Autores</a></li>
+	</ul>
+    <div class="seccion_tit">Iglesia</div>
+    <ul>
+        <li><a class="slinks" href="{{ path ('nueva_iglesia') }}">Nueva Iglesia</a></li>
+        <li><a class="slinks" href="{{ path ('iglesias_registradas') }}">Ver Iglesias</a></li>
+    </ul>
+    <div class="seccion_tit">Articulo</div>
+    <ul>
+        <li><a class="slinks" href="{{ path ('nuevo_articulo') }}">Nuevo Articulo</a></li>
+        <li><a class="slinks" href="{{ path ('nuevo_articulo') }}">Ver Articulos</a></li>
+    </ul>
+    <div class="seccion_tit">Usuario</div>
+    <ul>
+        <li><a class="slinks" href="">Nuevo Usuario</a></li>
+    </ul>
+</div>

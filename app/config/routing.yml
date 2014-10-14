@@ -1,0 +1,4 @@
+iglesia:
+    resource: "@IglesiaBundle/Resources/config/routing.yml"
+    prefix:   /
+

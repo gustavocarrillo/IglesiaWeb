@@ -1,0 +1,35 @@
+iglesia_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: IglesiaBundle:Default:index }
+
+nuevo_autor:
+    path:     /nuevo_autor
+    defaults: { _controller: IglesiaBundle:Autor:form }
+
+autor_creado:
+    path:     /exito
+    defaults: { _controller: IglesiaBundle:Autor:exito }
+
+nueva_iglesia:
+    path:     /nueva_iglesia
+    defaults: { _controller: IglesiaBundle:Iglesia:form }
+
+nuevo_articulo:
+    path:     /nuevo_articulo
+    defaults: { _controller: IglesiaBundle:Articulo:form }
+
+exception_control:
+    path:     /exepcion_controlada
+    defaults: { _controller: IglesiaBundle:Articulo:form }
+
+iglesias_registradas:
+    path:     /iglesiasregistradas
+    defaults: { _controller: IglesiaBundle:Iglesia:mostrarTodo }
+
+espec_iglesia:
+    path:     /iglesia/{id}
+    defaults: { _controller: IglesiaBundle:Iglesia:mostrarIglesia }
+
+autores_registrados:
+    path:     /autores
+    defaults: { _controller: IglesiaBundle:Autor:mostrarTodo }

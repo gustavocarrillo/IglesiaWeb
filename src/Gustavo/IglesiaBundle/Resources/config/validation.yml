@@ -1,0 +1,61 @@
+# Gustavo\IglesiaBundle\Entity\Autor
+
+Gustavo\IglesiaBundle\Entity\Autor:
+    constraints:
+          - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+                fields: nombre
+                message: "**Este nombre ya esta regisrado"
+    properties:
+          nombre:
+                - NotBlank: { message: "**Escriba un nombre" }
+          ministerio:
+                - NotBlank: { message: "**Seleccione un ministerio" }
+          iglesia:
+                - NotBlank: { message: "**Seleccione una iglesia" }
+          descripcion:
+                - notblank: { message: "**Escriba una descripcion" }
+          telefono:
+                - Regex:
+                    pattern: "/^\d/"
+                    match: true
+                    message: "**Dato invalido"
+
+Gustavo\IglesiaBundle\Entity\Iglesia:
+    constraints:
+          - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+                fields: nombre
+                message: "**Esta Iglesia ya esta regisrada"
+    properties:
+          nombre:
+                - NotBlank: { message: "**Escriba un nombre" }
+          direccion:
+                - NotBlank: { message: "**Escriba una direccion" }
+          localidad:
+                - NotBlank: { message: "**Escriba una localidad" }
+          biografia:
+                - notblank: { message: "**Escriba una biografia" }
+          telefono:
+                - Regex:
+                    pattern: "/^\d/"
+                    match: true
+                    message: "**Dato invalido"
+
+Gustavo\IglesiaBundle\Entity\Articulo:
+    constraints:
+          - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+                fields: titulo
+                message: "**Este titulo ya esta regisrada"
+    properties:
+          titulo:
+                - NotBlank: { message: "**Escriba un titulo" }
+          autor:
+                - NotBlank: { message: "**Seleccione un autor" }
+          tipo:
+                - NotBlank: { message: "**Seleccione un tipo" }
+          imagen:
+                - notblank: { message: "**Introduzca URL de un imagen" }
+          cuerpo:
+                - notblank: { message: "**Escriba un contenido" }
+
+
+

@@ -1,0 +1,22 @@
+{% extends "IglesiaBundle::adminBase.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }} <!--reset.css-->
+    <link rel="stylesheet" href="{{ asset('bundles/iglesia/css/iglesia.css') }}">
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}<!-- Sidebar -->
+    <div id="titulo"><h2>Datos de la Iglesia</h2></div>
+    <div id="container-table">
+        <table id="tabla">
+            <tr><td>Nombre:</td><td class="right-td">{{ iglesia.nombre }}</td></tr>
+            <tr><td>Telefono:</td><td class="right-td">{{ iglesia.telefono }}</td></tr>
+            <tr><td>Direccion:</td><td class="right-td">{{ iglesia.direccion}}</td></tr>
+            <tr><td>Localidad:</td><td class="right-td">{{ iglesia.localidad }}</td></tr>
+            <tr><td>E-mail:</td><td class="right-td">{{ iglesia.email }}</td></tr>
+            <tr><td>Red Social:</td><td class="right-td">{{ iglesia.redSocial }}</td></tr>
+            <tr><td>Biografia:</td><td class="right-td">{{ iglesia.biografia }}</td></tr>
+        </table>
+    </div>
+{% endblock %}
