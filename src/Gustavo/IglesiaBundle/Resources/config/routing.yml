@@ -33,3 +33,7 @@ espec_iglesia:
 autores_registrados:
     path:     /autores
     defaults: { _controller: IglesiaBundle:Autor:mostrarTodo }
+
+espec_autor:
+    path:     /autor/{id}
+    defaults: { _controller: IglesiaBundle:Autor:mostrarAutor }

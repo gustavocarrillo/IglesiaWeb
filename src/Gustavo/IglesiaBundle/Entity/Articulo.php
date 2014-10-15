@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Articulo
 {
     /**
-     * @ORM\ManyToOne(targetEntity="Autor", inversedBy="Articulo")
+     * @ORM\ManyToOne(targetEntity="Autor", inversedBy="articulos")
      *
      * @ORM\JoinColumn(name="autor_id", referencedColumnName="id")
      */

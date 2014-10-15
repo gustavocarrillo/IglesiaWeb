@@ -16,13 +16,11 @@ class Iglesia
     /**
      * @ORM\OneToMany(targetEntity="Autor", mappedBy="iglesia")
      */
-
-    private $autor;
-
+    private $autores;
 
     public function __construct()
     {
-        $this->autor=new ArrayCollection();
+        $this->autores=new ArrayCollection();
     }
 
     /**
@@ -44,7 +42,7 @@ class Iglesia
     /**
      * @var string
      *
-     * @ORM\Column(name="telefono", type="string", length=11)
+     * @ORM\Column(name="telefono", type="string", length=11, nullable=true)
      */
     private $telefono;
 
@@ -102,7 +100,7 @@ class Iglesia
      */
     public function setNombre($nombre)
     {
-        $this->nombre = $nombre;
+        $this->nombre = ucwords($nombre);
     
         return $this;
     }
@@ -121,6 +119,7 @@ class Iglesia
      * Set telefono
      *
      * @param string $telefono
+     *
      * @return Iglesia
      */
     public function setTelefono($telefono)
@@ -148,7 +147,7 @@ class Iglesia
      */
     public function setDireccion($direccion)
     {
-        $this->direccion = $direccion;
+        $this->direccion = ucfirst($direccion);
     
         return $this;
     }
@@ -167,11 +166,12 @@ class Iglesia
      * Set localidad
      *
      * @param string $localidad
+     *
      * @return Iglesia
      */
     public function setLocalidad($localidad)
     {
-        $this->localidad = $localidad;
+        $this->localidad = ucwords($localidad);
     
         return $this;
     }
@@ -191,6 +191,7 @@ class Iglesia
      * Set redSocial
      *
      * @param string $redSocial
+     *
      * @return Iglesia
      */
     public function setRedSocial($redSocial)
@@ -214,6 +215,7 @@ class Iglesia
      * Add autor
      *
      * @param \Gustavo\IglesiaBundle\Entity\Autor $autor
+     *
      * @return Iglesia
      */
     public function addAutor(\Gustavo\IglesiaBundle\Entity\Autor $autor)
@@ -252,7 +254,7 @@ class Iglesia
      */
     public function setBiografia($biografia)
     {
-        $this->biografia = $biografia;
+        $this->biografia = ucfirst($biografia);
     
         return $this;
     }

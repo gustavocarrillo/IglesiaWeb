@@ -28,7 +28,6 @@ class AutorController extends Controller
             if($form->isValid()){
 
                 $autor=$form->getData();
-                $form->count();
                 $em=$this->getDoctrine()->getManager();
                 $em->persist($autor);
                 $em->flush();
@@ -42,6 +41,10 @@ class AutorController extends Controller
             ));
     }
 
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function mostrarTodoAction()
     {
         $x = $this->getDoctrine()->getManager();
@@ -51,9 +54,33 @@ class AutorController extends Controller
         return $this->render('IglesiaBundle:Default:autores.html.twig', array('autor' => $autores));
     }
 
+    /**
+     * @param $id
+     *
+     * @return Response|\Symfony\Component\HttpFoundation\Response
+     */
+    public function mostrarAutorAction($id)
+    {
+        $autor = $this->getDoctrine()
+            ->getRepository('IglesiaBundle:Autor')
+            ->autorEspec($id);
+
+        $iglesia = $autor->getIglesia()->getNombre();
+
+        if ($autor != null) {
+            return $this->render('IglesiaBundle:Default:autor.html.twig', array('autor' => $autor, 'iglesia'=>$iglesia));
+        } else {
+            return new Response('No existen registros');
+        }
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function exitoAction()
     {
        $e="¡Los datos se han guardado exitosamente!";
-       return $this->render('IglesiaBundle:Default:exito.html.twig',array('e' => $e));
+
+       return $this->render('IglesiaBundle:Default:exito.html.twig', array('e' => $e));
     }
 }

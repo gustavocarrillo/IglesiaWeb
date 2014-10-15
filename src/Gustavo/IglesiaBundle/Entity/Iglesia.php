@@ -16,13 +16,11 @@ class Iglesia
     /**
      * @ORM\OneToMany(targetEntity="Autor", mappedBy="iglesia")
      */
-
-    private $autor;
-
+    private $autores;
 
     public function __construct()
     {
-        $this->autor=new ArrayCollection();
+        $this->autores=new ArrayCollection();
     }
 
     /**
@@ -220,7 +218,7 @@ class Iglesia
      *
      * @return Iglesia
      */
-    public function addAutor(\Gustavo\IglesiaBundle\Entity\Autor $autor)
+    public function addAutor($autor)
     {
         $this->autor[] = $autor;
     
@@ -232,7 +230,7 @@ class Iglesia
      *
      * @param \Gustavo\IglesiaBundle\Entity\Autor $autor
      */
-    public function removeAutor(\Gustavo\IglesiaBundle\Entity\Autor $autor)
+    public function removeAutor($autor)
     {
         $this->autor->removeElement($autor);
     }
@@ -293,5 +291,38 @@ class Iglesia
     public function getEmail()
     {
         return $this->email;
+    }
+
+    /**
+     * Add autores
+     *
+     * @param \Gustavo\IglesiaBundle\Entity\Autor $autores
+     * @return Iglesia
+     */
+    public function addAutore($autores)
+    {
+        $this->autores[] = $autores;
+    
+        return $this;
+    }
+
+    /**
+     * Remove autores
+     *
+     * @param \Gustavo\IglesiaBundle\Entity\Autor $autores
+     */
+    public function removeAutore($autores)
+    {
+        $this->autores->removeElement($autores);
+    }
+
+    /**
+     * Get autores
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getAutores()
+    {
+        return $this->autores;
     }
 }

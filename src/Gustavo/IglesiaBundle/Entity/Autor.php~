@@ -17,7 +17,6 @@ use Doctrine\ORM\Mapping as ORM;
  *
  */
 
-
 class Autor
 {
     /**
@@ -31,7 +30,7 @@ class Autor
     }
 
     /**
-     * @ORM\ManyToOne(targetEntity="Iglesia",inversedBy="Autor")
+     * @ORM\ManyToOne(targetEntity="Iglesia",inversedBy="autores")
      * @ORM\JoinColumn(name="iglesia_id", referencedColumnName="id")
      */
     private $iglesia;
@@ -115,7 +114,7 @@ class Autor
      */
     public function setNombre($nombre)
     {
-        $this->nombre = $nombre;
+        $this->nombre = ucwords($nombre);
 
         return $this;
     }
@@ -140,7 +139,7 @@ class Autor
      */
     public function setDescripcion($descripcion)
     {
-        $this->descripcion = $descripcion;
+        $this->descripcion = ucfirst($descripcion);
 
         return $this;
     }
@@ -298,5 +297,38 @@ class Autor
     public function getMinisterio()
     {
         return $this->ministerio;
+    }
+
+    /**
+     * Add articulo
+     *
+     * @param \Gustavo\IglesiaBundle\Entity\Articulo $articulo
+     * @return Autor
+     */
+    public function addArticulo(\Gustavo\IglesiaBundle\Entity\Articulo $articulo)
+    {
+        $this->articulo[] = $articulo;
+    
+        return $this;
+    }
+
+    /**
+     * Remove articulo
+     *
+     * @param \Gustavo\IglesiaBundle\Entity\Articulo $articulo
+     */
+    public function removeArticulo(\Gustavo\IglesiaBundle\Entity\Articulo $articulo)
+    {
+        $this->articulo->removeElement($articulo);
+    }
+
+    /**
+     * Get articulo
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getArticulo()
+    {
+        return $this->articulo;
     }
 }

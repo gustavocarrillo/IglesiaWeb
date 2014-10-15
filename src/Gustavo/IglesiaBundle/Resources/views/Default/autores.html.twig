@@ -11,7 +11,7 @@
     <div id="container">
         <ul>
             {% for autores in autor %}
-                <li class="ili"><a  class="ilinks" href="{{ path ('espec_iglesia', {'id': autores.id}) }}">{{ autores.nombre }}</a></li>
+                <li class="ili"><a  class="ilinks" href="{{ path ('espec_autor', {'id': autores.id}) }}">{{ autores.nombre }}</a></li>
             {% endfor %}
         </ul>
     </div>

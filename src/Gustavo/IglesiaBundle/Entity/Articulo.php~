@@ -59,7 +59,7 @@ class Articulo
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="f_edicion", type="datetime")
+     * @ORM\Column(name="f_edicion", type="datetime", nullable=true)
      */
     private $fEdicion;
 
@@ -73,14 +73,14 @@ class Articulo
     /**
      * @var string
      *
-     * @ORM\Column(name="imagen", type="string", length=255)
+     * @ORM\Column(name="imagen", type="string", length=255, nullable=true)
      */
     private $imagen;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="media", type="string", length=255)
+     * @ORM\Column(name="media", type="string", length=255, nullable=true)
      */
     private $media;
 
@@ -99,6 +99,7 @@ class Articulo
      * Set titulo
      *
      * @param string $titulo
+     *
      * @return Articulo
      */
     public function setTitulo($titulo)
@@ -122,6 +123,7 @@ class Articulo
      * Set cuerpo
      *
      * @param string $cuerpo
+     *
      * @return Articulo
      */
     public function setCuerpo($cuerpo)
@@ -145,6 +147,7 @@ class Articulo
      * Set tipo
      *
      * @param string $tipo
+     *
      * @return Articulo
      */
     public function setTipo($tipo)
@@ -216,6 +219,7 @@ class Articulo
      * Set estatus
      *
      * @param string $estatus
+     *
      * @return Articulo
      */
     public function setEstatus($estatus)
@@ -239,6 +243,7 @@ class Articulo
      * Set imagen
      *
      * @param string $imagen
+     *
      * @return Articulo
      */
     public function setImagen($imagen)
@@ -262,6 +267,7 @@ class Articulo
      * Set media
      *
      * @param string $media
+     *
      * @return Articulo
      */
     public function setMedia($media)
@@ -279,5 +285,29 @@ class Articulo
     public function getMedia()
     {
         return $this->media;
+    }
+
+    /**
+     * Set autor
+     *
+     * @param \Gustavo\IglesiaBundle\Entity\Autor $autor
+     * 
+     * @return Articulo
+     */
+    public function setAutor($autor = null)
+    {
+        $this->autor = $autor;
+    
+        return $this;
+    }
+
+    /**
+     * Get autor
+     *
+     * @return \Gustavo\IglesiaBundle\Entity\Autor 
+     */
+    public function getAutor()
+    {
+        return $this->autor;
     }
 }

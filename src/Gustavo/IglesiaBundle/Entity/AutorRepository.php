@@ -19,4 +19,21 @@ class AutorRepository extends EntityRepository
                 'select a from IglesiaBundle:Autor a order by a.nombre asc'
             )->getResult();
     }
+
+    public function autorEspec($id)
+    {
+        $query = $this->getEntityManager()
+            ->createQuery(
+                'SELECT a, i FROM IglesiaBundle:Autor a
+                JOIN a.iglesia i
+                WHERE a.id = :id'
+            )->setParameter('id', $id);
+
+        try {
+            return $query->getSingleResult();
+        } catch (\Doctrine\ORM\NoResultException $e) {
+            return null;
+        }
+
+    }
 }

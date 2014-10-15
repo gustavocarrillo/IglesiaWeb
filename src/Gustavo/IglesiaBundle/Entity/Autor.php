@@ -20,17 +20,17 @@ use Doctrine\ORM\Mapping as ORM;
 class Autor
 {
     /**
-     * @ORM\OneToMany(targetEntity="Articulo", mappedBy="Autor")
+     * @ORM\OneToMany(targetEntity="Articulo", mappedBy="autor")
      */
-    private $articulo;
+    private $articulos;
 
     public  function __construct()
     {
-        $this->articulo = new ArrayCollection();
+        $this->articulos = new ArrayCollection();
     }
 
     /**
-     * @ORM\ManyToOne(targetEntity="Iglesia",inversedBy="Autor")
+     * @ORM\ManyToOne(targetEntity="Iglesia",inversedBy="autores")
      * @ORM\JoinColumn(name="iglesia_id", referencedColumnName="id")
      */
     private $iglesia;
@@ -258,7 +258,7 @@ class Autor
      *
      * @return Autor
      */
-    public function setIglesia(\Gustavo\IglesiaBundle\Entity\Iglesia $iglesia = null)
+    public function setIglesia($iglesia = null)
     {
         $this->iglesia = $iglesia;
     
@@ -303,9 +303,10 @@ class Autor
      * Add articulo
      *
      * @param \Gustavo\IglesiaBundle\Entity\Articulo $articulo
+     *
      * @return Autor
      */
-    public function addArticulo(\Gustavo\IglesiaBundle\Entity\Articulo $articulo)
+    public function addArticulo($articulo)
     {
         $this->articulo[] = $articulo;
     
