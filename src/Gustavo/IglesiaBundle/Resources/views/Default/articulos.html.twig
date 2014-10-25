@@ -1,0 +1,30 @@
+{% extends "IglesiaBundle::adminBase.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset("bundles/iglesia/css/articulos.css") }}">
+{% endblock %}
+
+{%  block body %}
+    {{ parent() }}
+    <div id="titulo"><h2>Articulos Registrados</h2></div>
+    <div id="container">
+        <table>
+            <tr><td class="tit">Titulo:</td><td id="superior">Fecha de Creacion</td><td id="superior">Editado Ultima Vez</td><td id="stat">Estatus</td></tr>
+            {% for articulos in articulo %}
+                <tr>
+                    <td><a  class="tlinks" href="{{ path ('espec_articulo', {'id': articulos.id}) }}">{{ articulos.titulo }}</a></td>
+                    <td>{{ articulos.fCreado|date("d/m/y") }}</td>
+                    <td>
+                        {% if articulos.fEdicion is null %}
+                            Nunca editado
+                        {% else %}
+                            {{ articulos.fEdicion|date("d/m/y") }}
+                        {% endif %}
+                    </td>
+                    <td>{{ articulos.estatus }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

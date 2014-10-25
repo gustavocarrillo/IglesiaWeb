@@ -1,0 +1,20 @@
+{% extends "IglesiaBundle::adminBase.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }} <!--reset.css-->
+    <link rel="stylesheet" href="{{ asset('bundles/iglesia/css/iglesia.css') }}">
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}<!-- Sidebar -->
+    <div id="titulo"><h2>Datos del Articulo</h2></div>
+    <div id="container-table">
+        <table id="tabla">
+            <tr><td>Titulo:</td><td class="right-td">{{ articulo.titulo }}</td></tr>
+            <tr><td>Autor:</td><td class="right-td">{{ autor }}</td></tr>
+            <tr><td>Tipo:</td><td class="right-td">{{ articulo.tipo}}</td></tr>
+            <tr><td>Imagen:</td><td class="right-td">{{ articulo.imagen }}</td></tr>
+            <tr><td>Cuerpo:</td><td class="right-td">{{ articulo.cuerpo|raw }}</td></tr>
+        </table>
+    </div>
+{% endblock %}

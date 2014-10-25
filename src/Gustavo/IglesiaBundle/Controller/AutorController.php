@@ -67,8 +67,10 @@ class AutorController extends Controller
 
         $iglesia = $autor->getIglesia()->getNombre();
 
+        $iglesiaId = $autor->getIglesia()->getId();
+
         if ($autor != null) {
-            return $this->render('IglesiaBundle:Default:autor.html.twig', array('autor' => $autor, 'iglesia'=>$iglesia));
+            return $this->render('IglesiaBundle:Default:autor.html.twig', array('autor' => $autor, 'iglesia'=>$iglesia, 'iglesia_id'=>$iglesiaId));
         } else {
             return new Response('No existen registros');
         }

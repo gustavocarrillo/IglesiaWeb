@@ -6,17 +6,17 @@
 {% endblock %}
 
 {% block body %}
-    {{ parent() }}<!-- Sidebar -->
-    <div id="titulo"><h2>Datos del Autor</h2></div>
-    <div id="container-table">
-        <table id="tabla">
-            <tr><td>Nombre:</td><td class="right-td">{{ autor.nombre }}</td></tr>
-            <tr><td>Ministerio:</td><td class="right-td">{{ autor.ministerio }}</td></tr>
-            <tr><td>Iglesia:</td><td class="right-td">{{ iglesia }}</td></tr>
-            <tr><td>E-mail:</td><td class="right-td">{{ autor.email }}</td></tr>
-            <tr><td>Foto:</td><td class="right-td">{{ autor.foto }}</td></tr>
-            <tr><td>Red Social:</td><td class="right-td">{{ autor.redSocial }}</td></tr>
-            <tr><td>Descripcion:</td><td class="right-td">{{ autor.descripcion }}</td></tr>
-        </table>
-    </div>
+    {{ parent() }} {# Sidebar #}
+<div id="titulo"><h2>Datos del Autor</h2></div>
+<div id="container-table">
+    <table id="tabla">
+        <tr><td>Nombre:</td><td class="right-td">{{ autor.nombre }}</td></tr>
+        <tr><td>Ministerio:</td><td class="right-td">{{ autor.ministerio }}</td></tr>
+        <tr><td>Iglesia:</td><td class="right-td"><a href="{{ path ('espec_iglesia', {'id': iglesia_id}) }}">{{ iglesia }}</a></td></tr>
+        <tr><td>E-mail:</td><td class="right-td">{{ autor.email }}</td></tr>
+        <tr><td>Foto:</td><td class="right-td">{{ autor.foto }}</td></tr>
+        <tr><td>Red Social:</td><td class="right-td">{{ autor.redSocial }}</td></tr>
+        <tr><td>Descripcion:</td><td class="right-td">{{ autor.descripcion }}</td></tr>
+    </table>
+</div>
 {% endblock %}

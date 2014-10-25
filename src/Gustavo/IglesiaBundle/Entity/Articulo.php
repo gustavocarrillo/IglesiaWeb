@@ -66,7 +66,7 @@ class Articulo
     /**
      * @var string
      *
-     * @ORM\Column(name="estatus", type="string", length=50)
+     * @ORM\Column(name="estatus", type="string", length=50, nullable=true)
      */
     private $estatus;
 

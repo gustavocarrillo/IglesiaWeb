@@ -12,4 +12,25 @@ use Doctrine\ORM\EntityRepository;
  */
 class ArticuloRepository extends EntityRepository
 {
+    public function mostrarTodoXFecha()
+    {
+        return $this->getEntityManager()
+            ->createQuery('select a from IglesiaBundle:Articulo a order by a.fCreado desc')
+            ->getResult();
+    }
+
+    public function mostrarArticulo($id)
+    {
+        $query= $this->getEntityManager()
+            ->createQuery('select a, au from IglesiaBundle:Articulo a
+                           join a.autor au
+                           where a.id = :id')
+            ->setParameter('id', $id);
+
+        try{
+            return $query->getSingleResult();
+        }catch (\Doctrine\ORM\NoResultException $e){
+            return null;
+        }
+    }
 }

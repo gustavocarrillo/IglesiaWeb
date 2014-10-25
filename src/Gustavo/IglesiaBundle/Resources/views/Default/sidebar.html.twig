@@ -36,9 +36,8 @@
     ul li a.slinks:hover{padding-left: 5px;}
 
 </style>
-
+<!--Sidebar-->
 <div class="sidebar">
-	<!--<div id="tittle">Menu</div>-->
     <div class="seccion_tit" id="tittle">Autor</div>
 	<ul>
 		<li><a class="slinks" href="{{ path ('nuevo_autor') }}">Nuevo Autor</a></li>
@@ -52,10 +51,11 @@
     <div class="seccion_tit">Articulo</div>
     <ul>
         <li><a class="slinks" href="{{ path ('nuevo_articulo') }}">Nuevo Articulo</a></li>
-        <li><a class="slinks" href="{{ path ('nuevo_articulo') }}">Ver Articulos</a></li>
+        <li><a class="slinks" href="{{ path ('articulos_registrados') }}">Ver Articulos</a></li>
     </ul>
     <div class="seccion_tit">Usuario</div>
     <ul>
         <li><a class="slinks" href="">Nuevo Usuario</a></li>
     </ul>
 </div>
+<!--Fin Sidebar-->
